@@ -9,20 +9,43 @@
 // ---------- MOBILE MENU ----------
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
+const backdrop = document.getElementById('navBackdrop');
+
+function openMobileMenu() {
+    navMenu.classList.add('open');
+    hamburger.classList.add('open');
+    if (backdrop) backdrop.classList.add('show');
+    document.body.style.overflow = 'hidden'; // prevent page scroll while menu is open
+}
 
 function closeMobileMenu() {
     navMenu.classList.remove('open');
     hamburger.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('show');
+    document.body.style.overflow = '';
 }
 
 hamburger.addEventListener('click', function () {
-    navMenu.classList.toggle('open');
-    hamburger.classList.toggle('open');
+    if (navMenu.classList.contains('open')) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
 });
 
-// Close menu when clicking outside
+// Close when tapping the backdrop
+if (backdrop) {
+    backdrop.addEventListener('click', closeMobileMenu);
+}
+
+// Close menu when clicking outside nav on desktop
 document.addEventListener('click', function (e) {
-    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    if (
+        navMenu.classList.contains('open') &&
+        !navMenu.contains(e.target) &&
+        !hamburger.contains(e.target) &&
+        (!backdrop || !backdrop.contains(e.target))
+    ) {
         closeMobileMenu();
     }
 });
@@ -30,6 +53,11 @@ document.addEventListener('click', function (e) {
 // Close menu when a nav link is clicked (mobile)
 navMenu.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', closeMobileMenu);
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMobileMenu();
 });
 
 

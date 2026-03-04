@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -42,7 +43,7 @@
                     <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                     <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
                     <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                    <li><a href="contact.html" class="nav-cta">Get Free Quote</a></li>
+                    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
                 </ul>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -71,29 +72,29 @@
 
                     <div class="contact-items">
                         <div class="ci-item">
-                            <div class="ci-icon">📞</div>
+                            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
                             <div><strong>Phone</strong><span>+233 20 000 0000</span></div>
                         </div>
                         <div class="ci-item">
-                            <div class="ci-icon">✉️</div>
+                            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
                             <div><strong>Email</strong><span>info@easyclean.com</span></div>
                         </div>
                         <div class="ci-item">
-                            <div class="ci-icon">📍</div>
+                            <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
                             <div><strong>Address</strong><span>123 Clean Street, Accra, Ghana</span></div>
                         </div>
                         <div class="ci-item">
-                            <div class="ci-icon">🕐</div>
+                            <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
                             <div><strong>Hours</strong><span>Mon–Sat: 7AM – 7PM<br>Sun: 9AM – 4PM</span></div>
                         </div>
                     </div>
 
                     <div class="contact-btns">
-                        <a href="tel:+233200000000" class="contact-action-btn call-btn"><span>📞</span> Call Us Now</a>
-                        <a href="mailto:info@easyclean.com" class="contact-action-btn email-btn"><span>✉️</span> Send
+                        <a href="tel:+233200000000" class="contact-action-btn call-btn"><span><i class="fa-solid fa-phone"></i></span> Call Us Now</a>
+                        <a href="mailto:info@easyclean.com" class="contact-action-btn email-btn"><span><i class="fa-solid fa-envelope"></i></span> Send
                             Email</a>
                         <a href="https://wa.me/233200000000" target="_blank" rel="noopener"
-                            class="contact-action-btn whatsapp-btn"><span>💬</span> WhatsApp Us</a>
+                            class="contact-action-btn whatsapp-btn"><span><i class="fa-solid fa-whatsapp"></i></span> WhatsApp Us</a>
                     </div>
 
                     <!-- Map -->
@@ -231,22 +232,22 @@
 
             <!-- Support Bar -->
             <div class="support-bar">
-                <div class="sb-item"><span>📞</span>
+                <div class="sb-item"><span><i class="fa-solid fa-phone"></i></span>
                     <div><strong>Phone Support</strong>
                         <p>Mon–Sat 7AM–7PM</p>
                     </div>
                 </div>
-                <div class="sb-item"><span>💬</span>
+                <div class="sb-item"><span><i class="fa-solid fa-whatsapp"></i></span>
                     <div><strong>WhatsApp</strong>
                         <p>Always Available</p>
                     </div>
                 </div>
-                <div class="sb-item"><span>✉️</span>
+                <div class="sb-item"><span><i class="fa-solid fa-envelope"></i></span>
                     <div><strong>Email Response</strong>
                         <p>Within 2 Hours</p>
                     </div>
                 </div>
-                <div class="sb-item"><span>🔔</span>
+                <div class="sb-item"><span><i class="fa-solid fa-bell"></i></span>
                     <div><strong>Emergency Cleaning</strong>
                         <p>24/7 Available</p>
                     </div>
@@ -309,10 +310,10 @@
                 <div class="footer-col">
                     <h5>Contact</h5>
                     <ul>
-                        <li>📞 +233 20 000 0000</li>
-                        <li>✉️ info@easyclean.com</li>
-                        <li>📍 123 Clean Street, Accra</li>
-                        <li>🕐 Mon–Sat: 7AM–7PM</li>
+                        <li><i class="fa-solid fa-phone"></i>+233 20 000 0000</li>
+                        <li><i class="fa-solid fa-envelope"></i>info@easyclean.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i>123 Clean Street, Accra</li>
+                        <li><i class="fa-solid fa-clock"></i>Mon–Sat: 7AM–7PM</li>
                     </ul>
                 </div>
             </div>
@@ -328,7 +329,8 @@
         </div>
     </footer>
 
-    <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+    <div id="navBackdrop" class="nav-backdrop"></div>
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
     <script src="script.js"></script>
 </body>
 
