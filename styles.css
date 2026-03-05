@@ -629,7 +629,7 @@ main {
 /* Why Choose Us */
 .why-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 60%, #064e3b 100%);
+    background: var(--green-mid);
 }
 
 .why-grid {
@@ -638,14 +638,75 @@ main {
     gap: 1.5rem;
 }
 
+/* Why cards — base */
 .why-card {
-    background: rgba(255, 255, 255, .06);
-    border: 1px solid rgba(255, 255, 255, .08);
     border-radius: var(--radius);
     padding: 2rem 1.6rem;
+    border: none;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .12);
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+}
+
+/* Card 1 & 4 — White */
+.why-card:nth-child(1),
+.why-card:nth-child(4) {
+    background: var(--white);
+}
+
+.why-card:nth-child(1) .why-icon,
+.why-card:nth-child(4) .why-icon,
+.why-card:nth-child(1) h3,
+.why-card:nth-child(4) h3 {
+    color: var(--black);
+}
+
+.why-card:nth-child(1) p,
+.why-card:nth-child(4) p {
+    color: var(--muted);
+}
+
+/* Card 2 & 5 — Sea Blue */
+.why-card:nth-child(2),
+.why-card:nth-child(5) {
+    background: var(--blue-mid);
+}
+
+.why-card:nth-child(2) .why-icon,
+.why-card:nth-child(5) .why-icon,
+.why-card:nth-child(2) h3,
+.why-card:nth-child(5) h3 {
     color: var(--white);
 }
 
+.why-card:nth-child(2) p,
+.why-card:nth-child(5) p {
+    color: rgba(255, 255, 255, .82);
+}
+
+/* Card 3 & 6 — Navy */
+.why-card:nth-child(3),
+.why-card:nth-child(6) {
+    background: var(--black);
+}
+
+.why-card:nth-child(3) .why-icon,
+.why-card:nth-child(6) .why-icon,
+.why-card:nth-child(3) h3,
+.why-card:nth-child(6) h3 {
+    color: var(--green-mid);
+}
+
+.why-card:nth-child(3) p,
+.why-card:nth-child(6) p {
+    color: rgba(255, 255, 255, .72);
+}
+
+/* Shared icon & heading defaults (fallback) */
 .why-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -659,7 +720,6 @@ main {
 
 .why-card p {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, .65);
     line-height: 1.6;
 }
 
@@ -705,8 +765,11 @@ main {
     margin-bottom: 1.2rem;
 }
 
+/* FA icon inside service card circle */
+.sc-icon-wrap i,
 .sc-icon {
     font-size: 1.8rem;
+    color: var(--blue-mid);
 }
 
 .service-card h3 {
@@ -1068,6 +1131,14 @@ main {
     color: #f59e0b;
     font-size: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    gap: 2px;
+}
+
+/* Color inherited by FA star icons */
+.testi-stars i,
+.rs-stars i {
+    color: #f59e0b;
 }
 
 .testi-text {
@@ -1088,7 +1159,7 @@ main {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue-mid), var(--green));
+    background: var(--green-mid);
     color: var(--white);
     display: flex;
     align-items: center;
@@ -1491,9 +1562,8 @@ footer {
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, .7);
-    font-size: 0.78rem;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-size: 1rem;
+    /* larger so FA brand icons look right */
     transition: background .2s;
 }
 
