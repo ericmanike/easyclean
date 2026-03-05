@@ -4,8 +4,9 @@
    No unnecessary animations — clean, purposeful JS only.
 ============================================= */
 
-'use strict';
 
+
+'use strict';
 // ---------- MOBILE MENU ----------
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
