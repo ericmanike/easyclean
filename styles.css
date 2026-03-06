@@ -640,87 +640,36 @@ main {
 
 /* Why cards — base */
 .why-card {
+    background: #0f172a;
     border-radius: var(--radius);
-    padding: 2rem 1.6rem;
+    padding: 2.2rem 1.8rem;
     border: none;
     transition: transform .2s, box-shadow .2s;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, .12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
 }
 
 .why-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
 }
 
-/* Card 1 & 4 — White */
-.why-card:nth-child(1),
-.why-card:nth-child(4) {
-    background: var(--white);
-}
-
-.why-card:nth-child(1) .why-icon,
-.why-card:nth-child(4) .why-icon,
-.why-card:nth-child(1) h3,
-.why-card:nth-child(4) h3 {
-    color: var(--black);
-}
-
-.why-card:nth-child(1) p,
-.why-card:nth-child(4) p {
-    color: var(--muted);
-}
-
-/* Card 2 & 5 — Sea Blue */
-.why-card:nth-child(2),
-.why-card:nth-child(5) {
-    background: var(--blue-mid);
-}
-
-.why-card:nth-child(2) .why-icon,
-.why-card:nth-child(5) .why-icon,
-.why-card:nth-child(2) h3,
-.why-card:nth-child(5) h3 {
-    color: var(--white);
-}
-
-.why-card:nth-child(2) p,
-.why-card:nth-child(5) p {
-    color: rgba(255, 255, 255, .82);
-}
-
-/* Card 3 & 6 — Navy */
-.why-card:nth-child(3),
-.why-card:nth-child(6) {
-    background: var(--black);
-}
-
-.why-card:nth-child(3) .why-icon,
-.why-card:nth-child(6) .why-icon,
-.why-card:nth-child(3) h3,
-.why-card:nth-child(6) h3 {
+.why-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
     color: var(--green-mid);
 }
 
-.why-card:nth-child(3) p,
-.why-card:nth-child(6) p {
-    color: rgba(255, 255, 255, .72);
-}
-
-/* Shared icon & heading defaults (fallback) */
-.why-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
 .why-card h3 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.7rem;
+    color: var(--white);
 }
 
 .why-card p {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* ============================================
@@ -1159,7 +1108,7 @@ main {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--green-mid);
+    background: #21b55a;
     color: var(--white);
     display: flex;
     align-items: center;
