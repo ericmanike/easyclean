@@ -891,12 +891,14 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.8rem;
+    padding: 30px;
 }
 
 .gallery-card {
     background: var(--white);
     border-radius: var(--radius);
     overflow: hidden;
+    height:100%;
     border: 1px solid var(--border);
     box-shadow: var(--shadow-sm);
     transition: box-shadow .25s, transform .25s;
